@@ -1,17 +1,17 @@
 # Cambuzz installation guide
 
 ## Step 1: Install Apache
-* `$ sudo apt-get update`
-* `$ sudo apt-get install apache2`
+* $ `sudo apt-get update`
+* $ `sudo apt-get install apache2`
 
 ## Step 2: Install MySQL
 
-* `$ sudo apt-get install mysql-server php5-mysql`
+* $ `sudo apt-get install mysql-server php5-mysql`
 
 Note : During the installation, your server will ask you to select and confirm a password for the MySQL "root" user. This is an administrative account in MySQL that has increased privileges. Think of it as being similar to the root account for the server itself (the one you are configuring now is a MySQL-specific account however).
 
-* `$ sudo mysql_install_db`
-* `$ sudo mysql_secure_installation`
+* $ `sudo mysql_install_db`
+* $ `sudo mysql_secure_installation`
 
 
 Note : You will be asked to enter the password you set for the MySQL root account. Next, it will ask you if you want to change that password. If you are happy with your current password, type "n" for "no" at the prompt.
@@ -40,7 +40,7 @@ Move the PHP index file highlighted above to the first position after the Direct
 
 The change has been highlighted. When you are finished, save and close the file.
 
-* `$ sudo service apache2 restart`
+* $ `sudo service apache2 restart`
 
 
 ## Step 4: Test PHP Processing on your Web Server
@@ -59,14 +59,14 @@ When you are finished, save and close the file.
 * If this is successful, then PHP is working as expected.
 
 ## Step 5: Install phpMyAdmin
-* `$ sudo apt-get update`
-* `$ sudo apt-get install phpmyadmin`
+* $ `sudo apt-get update`
+* $ `sudo apt-get install phpmyadmin`
 					
 Warning
 When the first prompt appears, apache2 is highlighted, but not selected. If you do not hit "SPACE" to select Apache, the installer will not move the necessary files during installation. Hit "SPACE", "TAB", and then "ENTER" to select Apache.
 
-* `$ sudo php5enmod mcrypt`
-* `$ sudo service apache2 restart`
+* $ `sudo php5enmod mcrypt`
+* $ `sudo service apache2 restart`
 * Visit the following link on the browser : `http://localhost/phpmyadmin`.  
 
 If this is successful, then PHP is working as expected. You can now log into the interface using the root username and the administrative password you set up during the MySQL installation.
